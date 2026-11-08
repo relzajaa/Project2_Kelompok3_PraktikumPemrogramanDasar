@@ -286,8 +286,8 @@ Folder `Data_Sistem/` awalnya hanya berisi judul kolom (tanpa data contoh), jadi
 | Anggota | File yang Dikerjakan | Isi Tugas |
 |---------|----------------------|-----------|
 | **Farrel Muflif Muzzaki** | `mahasiswa.py`, `menu_app.py` | Class `Mahasiswa`, `PenyimpananMahasiswa`, dan `MahasiswaManager`; menu utama dan submenu, alur input pengguna, serta menu tantangan |
-| **Azzahra Hendar Asafira** | `alat.py`, `README.md` | Enum `KondisiAlat` dan `StatusAlat`; class `Alat`, `PenyimpananAlat`, dan `AlatManager`; penjelasan repository |
-| **Gisma Dian Utami** | `transaksi.py`, `main.py` | Enum `StatusTransaksi`; class `DetailPeminjaman`, `Transaksi`, `PenyimpananTransaksi`, dan `TransaksiManager`; pintu masuk program |
+| **Gisma Dian Utami** | `alat.py`, `README.md` | Enum `KondisiAlat` dan `StatusAlat`; class `Alat`, `PenyimpananAlat`, dan `AlatManager`; penjelasan repository |
+| **Azzahra Hendar Asafira** | `transaksi.py`, `main.py` | Enum `StatusTransaksi`; class `DetailPeminjaman`, `Transaksi`, `PenyimpananTransaksi`, dan `TransaksiManager`; pintu masuk program |
 | **Nourin Akbar Pratama** | `tampilan.py`, `README.md` | Tampilan terminal (warna, kotak, dan tabel); penjelasan repository |
 
 <div align="center">
