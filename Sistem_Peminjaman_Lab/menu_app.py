@@ -23,7 +23,6 @@ def labelStatus(trx):
     return status
 
 
-# Menampilkan tabel mahasiswa
 def tampilMahasiswa(daftar):
     baris = []
     for mhs in daftar:
@@ -32,7 +31,6 @@ def tampilMahasiswa(daftar):
     ui.tabel(["NIM", "Nama", "No. HP", "Trx Aktif", "Status"], baris)
 
 
-# Menampilkan tabel alat
 def tampilAlat(daftar):
     baris = []
     for alat in daftar:
@@ -40,7 +38,6 @@ def tampilAlat(daftar):
     ui.tabel(["Kode", "Nama", "Kategori", "Kondisi", "Status", "Trx Aktif"], baris)
 
 
-# Menampilkan tabel ringkasan transaksi
 def tampilTransaksi(daftar):
     baris = []
     for trx in daftar:
@@ -49,7 +46,6 @@ def tampilTransaksi(daftar):
     ui.tabel(["ID", "Mahasiswa", "Tgl Pinjam", "Batas", "Alat", "Status"], baris)
 
 
-# Menampilkan detail satu transaksi beserta alat-alatnya.
 def tampilDetail(trx):
     ui.kotak(f"TRANSAKSI {trx.id}", [
         f"Mahasiswa      : {trx.mahasiswa.nama} ({trx.mahasiswa.nim})",
@@ -93,7 +89,6 @@ def pilihEnum(kelas, pertanyaan):
     return pilihan[int(nomor) - 1]
 
 
-# Minta tanggal kembali; Enter berarti hari ini.
 def inputTanggal():
     teks = ui.tanya("Tanggal kembali (DD-MM-YYYY, Enter = hari ini)")
     if not teks:
@@ -121,7 +116,6 @@ def tampilPeringkat(judul, kolom, daftar):
 
 # Kelas utama program: menampilkan menu dan menjalankan pilihan pengguna.
 class MenuApp:
-    # Siapkan manager dan daftar menu. Isi menu: nomor -> (nama, fungsi, perlu jeda "Tekan Enter").
     def __init__(self):
         self.mgrMahasiswa = MahasiswaManager()
         self.mgrAlat = AlatManager()
@@ -156,7 +150,7 @@ class MenuApp:
             while self._berjalan:
                 self.tampilkanMenu()
                 self.prosesPilihan(ui.tanya(f"Pilih menu (1-{len(self._menu)})"))
-        except (KeyboardInterrupt, EOFError):  # Ctrl+C / Ctrl+D
+        except (KeyboardInterrupt, EOFError):
             self.keluar()
 
     # Baca semua data dari file CSV. Transaksi dimuat terakhir karena butuh data mahasiswa dan alat.
@@ -226,7 +220,6 @@ class MenuApp:
             else:
                 ui.pesan("Pilihan tidak valid.", "error")
                 ui.tekanEnter()
-
 
     # Submenu kelola data mahasiswa.
     def _menuMahasiswa(self):
